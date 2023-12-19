@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Api">
+<listeners>
+<listener class-name="org.meto.appium.extentreports.Listeners"/>
+</listeners>
+
+	<test name="App Manager Login Test">
+		<classes>
+			<class name="org.meto.api.endpoints.EndPointCatalogs_ecivil" />
+		</classes>
+	</test> <!-- Test -->
+	
+	<test name="Test API">
+		<classes>
+			<class name="org.meto.api.endpoints.EndPointRuleTasa" />
+		</classes>
+	</test> <!-- Test -->
+
+	
+
+	<!-- <test name="Open Account Test"> <classes> <class name="com.m2a.testcases.OpenAccountTest" 
+		/> </classes> </test> -->   <!-- Test -->
+
+</suite> <!-- Suite -->
