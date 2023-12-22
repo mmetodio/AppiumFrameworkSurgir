@@ -64,11 +64,11 @@ public class TFProposal extends TestBase {
 		formProposal.btnCerrarRse();
 		//formProposal.calculaTasa();
 		formProposal.nextOneProposal();
-		formProposal.fecVencimiento("15/01/2024");
+		formProposal.fecVencimiento("20/01/2024");
 		formProposal.savePropos();
 		formProposal.seguroBasico();
 		formProposal.swipeScreenOneProposal();
-		/*
+		//Beneficiario
 		formProposal.addOptative();
 		formProposal.tipoDocOptative();
 		formProposal.numberDoc("31323334");
@@ -88,7 +88,7 @@ public class TFProposal extends TestBase {
 		formProposal.avancebeneseg();
 		//formProposal.nexOneBeneficiaries(); // test
 		formProposal.percentage("100");
-		formProposal.saveBeneficiaries();*/ 
+		formProposal.saveBeneficiaries();
 		
 	//	formProposal.saveProposal();
 	//	formProposal.nextProposal();

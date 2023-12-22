@@ -237,6 +237,74 @@
 		
 
 	</dependencies>
+	
+	<profiles>
+		<profile>
+			<id>Regresion</id>
+			<build>
+				<pluginManagement>
+					<plugins>										
+						<plugin>
+						    <groupId>org.apache.maven.plugins</groupId>
+						    <artifactId>maven-surefire-plugin</artifactId>
+						    <version>3.2.3</version>
+							<configuration>
+							<useSystemClassLoader>false</useSystemClassLoader>
+							 <testFailureIgnore>true</testFailureIgnore>
+				                  <suiteXmlFiles>
+				                     <suiteXmlFile>src\test\resources\runners\testng.xml</suiteXmlFile>
+				                  </suiteXmlFiles>
+		              		</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+			<profile>
+			<id>Smoke</id>
+			<build>
+				<pluginManagement>
+					<plugins>										
+						<plugin>
+						    <groupId>org.apache.maven.plugins</groupId>
+						    <artifactId>maven-surefire-plugin</artifactId>
+						    <version>3.2.3</version>
+							<configuration>
+							<useSystemClassLoader>false</useSystemClassLoader>
+							 <testFailureIgnore>true</testFailureIgnore>
+				                  <suiteXmlFiles>
+				                     <suiteXmlFile>src\test\resources\runners\testng_smoke.xml</suiteXmlFile>
+				                  </suiteXmlFiles>
+		              		</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+			<profile>
+			<id>Api</id>
+			<build>
+				<pluginManagement>
+					<plugins>										
+						<plugin>
+						    <groupId>org.apache.maven.plugins</groupId>
+						    <artifactId>maven-surefire-plugin</artifactId>
+						    <version>3.2.3</version>
+							<configuration>
+							<useSystemClassLoader>false</useSystemClassLoader>
+							 <testFailureIgnore>true</testFailureIgnore>
+				                  <suiteXmlFiles>
+				                     <suiteXmlFile>src\test\resources\runners\testngapi.xml</suiteXmlFile>
+				                  </suiteXmlFiles>
+		              		</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+		
+		
+	</profiles>
 
 	<build>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
@@ -260,17 +328,6 @@
 					            <source>1.8</source>
 					            <target>1.8</target>
 					        </configuration>
-				</plugin>
-				<plugin>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.2.1</version>
-					<configuration>
-					<useSystemClassLoader>false</useSystemClassLoader>
-					 <testFailureIgnore>true</testFailureIgnore>
-		                  <suiteXmlFiles>
-		                     <suiteXmlFile>src\test\resources\runners\testng.xml</suiteXmlFile>
-		                  </suiteXmlFiles>
-              		</configuration>
 				</plugin>
 				
 				<plugin>

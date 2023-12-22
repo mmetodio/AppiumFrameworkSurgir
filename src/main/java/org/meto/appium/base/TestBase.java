@@ -70,7 +70,7 @@ public class TestBase extends AppiumUtils{
 		options.setCapability("noReset", false);
 		
 		options.setChromedriverExecutable(System.getProperty("user.dir")+"//src//test//resources//driver//chromedriver");
-		options.setApp(System.getProperty("user.dir")+"//src//test//resources//app//23-12-14_1227_Surgir_debug_6.0.13_Release6.0.13.apk");
+		options.setApp(System.getProperty("user.dir")+"//src//test//resources//app//23-12-20_1314_Surgir_debug_6.0.13_Release6.0.13.apk");
 	//	options.setApp(System.getProperty("user.dir")+"//src//test//resources//app//23-11-14_1033_Surgir_debug_6.0.11_Release6.0.11.apk"); //de 5 a 11
 
 		options.setAppWaitActivity("com.saucelabs.mydemoapp.rn.MainActivity"); //nuevo

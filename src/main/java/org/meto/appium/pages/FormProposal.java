@@ -162,13 +162,13 @@ public class FormProposal extends AndroidActions {
 		
 	}
 	
-	// aqui capturo el valos del segmento en propuesta
+	// aqui capturo el valor del segmento en propuesta
 	public FormProposal segmentos() {
-		String segmentis = segmentx.getText();
-	//	WebElement tsegm = driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.RelativeLayout/android.widget.RelativeLayout[1]/android.widget.TextView[2]"));		
-	//	String segmentis = tsegm.getText();
-	
-		System.out.println("SEGMENTO: "+segmentis);
+	//	dsegmento = segmentx.getText();
+		
+	//	this.dsegmento = segmentx.getText();
+	//	System.out.println("SEGMENTO: "+dsegmento);
+		segmentosdat();
 		return this;
 		
 	}

@@ -67,7 +67,7 @@ public class TFSignature extends TestBase {
 		formSignature.finishSignature();
 		formSignature.checkDate();
 		formSignature.nextDate();
-		formSignature.politics();
+		formSignature.politicdate();
 		formSignature.finishSend();
 	//	formSignature.politics();
 		/*

@@ -49,7 +49,7 @@ public class TFProspect extends TestBase {
 	//	formProspect.ReturnButton();
 		formProspect.btnPropuesta();
 		formProspect.PropuestaHome();
-		formProspect.setNumDoc("46122063");  //48208831 C  74883197 D    08163942
+		formProspect.setNumDoc("44582321");  //48208831 C  74883197 D    08163942
 		formProspect.Verificando();
 		formProspect.setFecCaducidad("01/01/2030");
 		formProspect.setFirstName("TestAutomat");

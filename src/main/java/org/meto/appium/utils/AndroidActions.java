@@ -30,6 +30,10 @@ import static io.appium.java_client.touch.TapOptions.tapOptions;
 
 public class AndroidActions<W3cActions, AndroidElement, MobileElement> {
 	AndroidDriver driver;
+
+	static String nsegment;//= driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.RelativeLayout/android.widget.RelativeLayout[1]/android.widget.TextView[2]")).getText();;
+	static String casah;
+//	FormProposal nproposal = new FormProposal(driver);
 //	String segmento = driver.findElement(By.id("pe.com.surgir.surgirapp:id/id_segment")).getText();
 	
 	public AndroidActions(AndroidDriver driver)
@@ -212,26 +216,6 @@ public class AndroidActions<W3cActions, AndroidElement, MobileElement> {
 
 	}
 	
-	/*
-	public void touchGenero(String text) {
-		List<WebElement> lists1 = driver.findElements(By.xpath("//android.widget.EditText[@text='"+text+"']"));
-		TouchAction touch = new TouchAction<>(driver);
-		touch.press(PointOption.point(250, 549));
-		touch.release();
-		touch.perform();
-
-	}*/
-	
-	//Usando DropDown
-	/*
-	public void gradoInstruction() {
-		Select dropdown = new Select(driver.findElement(By.id("pe.com.surgir.surgirapp:id/list")));
-	//	dropdown.selectByVisibleText("SECUNDARIA");
-	//	dropdown.selectByIndex(1);
-		dropdown.selectByValue("SECUNDARIA");
-		
-	}*/
-	
 	public void gradoInstruction() {
 		List<WebElement> lists8 = driver.findElements(By.id("pe.com.surgir.surgirapp:id/list"));
 		TouchAction touch8 = new TouchAction<>(driver);
@@ -288,13 +272,7 @@ public class AndroidActions<W3cActions, AndroidElement, MobileElement> {
 		
 	}
 	
-	public void tipoComprobante() {
-	/*	List<WebElement> lists13 = driver.findElements(By.id("pe.com.surgir.surgirapp:id/list"));
-		TouchAction touch13 = new TouchAction<>(driver);
-		touch13.press(PointOption.point(131,1092));
-		touch13.release();
-		touch13.perform();*/
-		
+	public void tipoComprobante() {		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 			@SuppressWarnings("unchecked")
 			List<MobileElement> ListCompPago=(List<MobileElement>) driver.findElements(By.id("android:id/text1"));
@@ -330,36 +308,6 @@ public class AndroidActions<W3cActions, AndroidElement, MobileElement> {
 		
 	}
 	
-	/*
-	public void casaHabita() {
-		List<WebElement> lists15 = driver.findElements(By.id("pe.com.surgir.surgirapp:id/list"));
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS); 
-		TouchAction touch15 = new TouchAction<>(driver);
-		touch15.press(PointOption.point(67,825)); //69,915
-		touch15.release();
-		touch15.perform();
-		
-	}*/
-	
-	/*// Cuando no tenia lista
-	public void casaHabita() {
-		List<WebElement> lists15 = driver.findElements(By.className("android.widget.EditText"));
-		System.out.println("Count dropdown:"+lists15.size());
-        for(WebElement e:lists15)
-        {
-            String val=e.getText();
-    		System.out.println("casa dropdown:"+val);
-           
-            if(val.equalsIgnoreCase("DE FAMILIARES"))  	
-            	
-            {
-                e.click();
-                break;
-            }
-        }
-		
-	}*/
-	
 	//DE CONSULTA EXTERNO
 	public void casaHabita() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -371,11 +319,13 @@ public class AndroidActions<W3cActions, AndroidElement, MobileElement> {
 		        String chab = ((WebElement) webElementmobileElement).getText();
 		        if(chab.equals("OTRO")){
 		        	((WebElement) webElementmobileElement).click();
+		        //		casah = ((WebElement) webElementmobileElement).getText();
 		        	break;
 		        }
+		        casah = ((WebElement) webElementmobileElement).getText();
 		    }		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
+		
 	}
 	
 	public void numPersonas() {
@@ -766,8 +716,8 @@ public class AndroidActions<W3cActions, AndroidElement, MobileElement> {
 				//System.out.println(webElementmobileElement);
 			        System.out.println(((WebElement) webElementmobileElement).getText());
 			        String chad = ((WebElement) webElementmobileElement).getText();
-			       // if(chad.equals("SEGURO DESGRAVAMEN")){
-			        if(chad.equals("DESGRAV PORCENTUAL")){
+			        if(chad.equals("SEGURO DESGRAVAMEN")){
+			     //   if(chad.equals("DESGRAV PORCENTUAL")){
 			        	((WebElement) webElementmobileElement).click();
 			        	break;
 			        }
@@ -956,11 +906,17 @@ public class AndroidActions<W3cActions, AndroidElement, MobileElement> {
 		
 	}
 		
-	public void politics() {
+	
+	public void segmentosdat() {
+	 //   this.nsegment = driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.RelativeLayout/android.widget.RelativeLayout[1]/android.widget.TextView[2]")).getText();
+	     WebElement nsegmentin = driver.findElement(By.xpath("//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.ScrollView/android.widget.RelativeLayout/android.widget.RelativeLayout[1]/android.widget.TextView[2]"));
+	     this.nsegment=nsegmentin.getText();
 		
-	//	FormProposal prospecta = new FormProposal(driver);
-		FormProposal nproposal = new FormProposal(driver);
-		System.out.println("validando politica: "); //+nproposal.segmentos()
+	}
+	
+	public void politics() {
+		System.out.println("validando casa habitacion: "+ casah); //+nproposal.segmentos()
+		System.out.println("validando segmento "+ nsegment);
 		
 		//String alerttitlenext2 = driver.findElement(By.id("android:id/content")).getText();
 	  //  System.out.println(segmento.substring(10, 1));
@@ -990,6 +946,8 @@ public class AndroidActions<W3cActions, AndroidElement, MobileElement> {
 
 		}*/
 	}
+	
+	
 	
 	public void swipeScreenTwoRsen() {
 		String text1 = driver.findElement(By.id("pe.com.surgir.surgirapp:id/rse_title_result_state")).getText();
