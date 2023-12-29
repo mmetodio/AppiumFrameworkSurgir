@@ -79,8 +79,8 @@ public class TestBase extends AppiumUtils{
 		options.setCapability("browserstack.networkLogs", "true");
 	//	options.setCapability("browserstack.debug", "true");//activar los registros visuales de log
 
-	//	driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub/"), options);
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub/"), options);
+	//	driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
 	//	driver = new AndroidDriver(service.getUrl(), options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
