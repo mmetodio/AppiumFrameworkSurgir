@@ -59,18 +59,6 @@
 			<class name="org.meto.appium.tests.TFSignature" /> 
 		</classes> 
 	</test>   <!-- Test -->
-	
-	<test name="Guarantor Test"> 
-		<classes> 
-			<class name="org.meto.appium.tests.TFGuarantor" /> 
-		</classes> 
-	</test>   <!-- Test -->
-	
-	<test name="Customer Guarantor Test"> 
-		<classes> 
-			<class name="org.meto.appium.tests.TFCustomerGuarantor" /> 
-		</classes> 
-	</test>  <!-- Test -->
 
 	<!-- <test name="Open Account Test"> <classes> <class name="com.m2a.testcases.OpenAccountTest" 
 		/> </classes> </test> -->   <!-- Test -->

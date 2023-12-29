@@ -70,7 +70,7 @@ public class TestBase extends AppiumUtils{
 		options.setCapability("noReset", false);
 		
 		options.setChromedriverExecutable(System.getProperty("user.dir")+"//src//test//resources//driver//chromedriver");
-		options.setApp(System.getProperty("user.dir")+"//src//test//resources//app//23-12-20_1314_Surgir_debug_6.0.13_Release6.0.13.apk");
+		options.setApp(System.getProperty("user.dir")+"//src//test//resources//app//23-12-28_1031_Surgir_debug_6.0.14_Release6.0.14.apk");
 	//	options.setApp(System.getProperty("user.dir")+"//src//test//resources//app//23-11-14_1033_Surgir_debug_6.0.11_Release6.0.11.apk"); //de 5 a 11
 
 		options.setAppWaitActivity("com.saucelabs.mydemoapp.rn.MainActivity"); //nuevo
@@ -80,8 +80,8 @@ public class TestBase extends AppiumUtils{
 	//	options.setCapability("browserstack.debug", "true");//activar los registros visuales de log
 
 	//	driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub/"), options);
-	//	driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
-		driver = new AndroidDriver(service.getUrl(), options);
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
+	//	driver = new AndroidDriver(service.getUrl(), options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		
