@@ -5,18 +5,23 @@
 <listener class-name="org.meto.appium.extentreports.Listeners"/>
 </listeners>
 
-	<test name="App Manager Login Test">
+	<test name="Test API Estado Civil">
 		<classes>
 			<class name="org.meto.api.endpoints.EndPointCatalogs_ecivil" />
 		</classes>
 	</test> <!-- Test -->
 	
-	<test name="Test API">
+	<test name="Test API Tasa">
 		<classes>
 			<class name="org.meto.api.endpoints.EndPointRuleTasa" />
 		</classes>
 	</test> <!-- Test -->
 
+	<test name="Test API Buscar cliente">
+		<classes>
+			<class name="org.meto.api.endpoints.EndPointFoundCustomerDni" />
+		</classes>
+	</test> <!-- Test -->
 	
 
 	<!-- <test name="Open Account Test"> <classes> <class name="com.m2a.testcases.OpenAccountTest" 

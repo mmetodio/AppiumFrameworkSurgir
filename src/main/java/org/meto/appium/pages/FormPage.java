@@ -23,13 +23,10 @@ public class FormPage extends AndroidActions{
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 
-	//	PageFactory.initElements(new AppiumElementLocatorFactory(decoratedAppiumDriver, Duration.ofSeconds(1), new DefaultElementByBuilder(MobilePlatform.ANDROID, AutomationName.ANDROID_UIAUTOMATOR2)), this);
 		PageFactory.initElements(new AppiumElementLocatorFactory(driver, Duration.ofSeconds(5000), new DefaultElementByBuilder(MobilePlatform.ANDROID, AutomationName.ANDROID_UIAUTOMATOR2)), this);
 
 	}
 	
-	//@AndroidFindBy(id="com.android.permissioncontroller:id/permission_allow_foreground_only_button")   
-	//@AndroidFindBy(id="com.android.permissioncontroller:id/permission_allow_foreground_only_button")
 	@AndroidFindBy(xpath="//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.Button[1]")
 	private WebElement sourcex;
 	
@@ -46,47 +43,29 @@ public class FormPage extends AndroidActions{
 //	@AndroidFindBy(xpath="//android.widget.EditText[@text='gender']")
 	//private WebElement maleOption;
 	
-	//driver.findElement(By.id("pe.com.surgir.surgirapp:id/btnLogin")).click();
 	@AndroidFindBy(id="pe.com.surgir.surgirapp:id/btnLogin")
 	public WebElement loginButton;
 	
 	// Sesion Local
-	//driver.findElement(By.xpath("//android.widget.EditText[@text='Agencia']")).click();
-	//@AndroidFindBy(xpath="//android.widget.EditText[@text='Agencia']") //active 2
 	@AndroidFindBy(xpath="//android.widget.AutoCompleteTextView[@text='Agencia']")
 	private WebElement agencySelection;
 	
-	//@AndroidFindBy(xpath="//android.widget.AutoCompleteTextView[@text='Rol']") // Active 2
 	@AndroidFindBy(xpath="//android.widget.AutoCompleteTextView[@text='Rol']")
 	private WebElement rolSelection;
 	
-	//driver.findElement(By.id("pe.com.surgir.surgirapp:id/btnLoginRol")).click();
 	@AndroidFindBy(id="pe.com.surgir.surgirapp:id/btnLoginRol")
 	public WebElement rolButton;
 	
 	//Login local
-	//driver.findElement(By.xpath("//android.widget.EditText[@text='Nueva contraseña local']")).sendKeys("Prueba1234");
 	@AndroidFindBy(xpath="//android.widget.EditText[@text='Nueva contraseña local']")
 	public WebElement claveLocal1;
 	
-	//driver.findElement(By.xpath("//android.widget.EditText[@text='Confirmación de contraseña local']")).sendKeys("Prueba1234");
 	@AndroidFindBy(xpath="//android.widget.EditText[@text='Confirmación de contraseña local']")
 	public WebElement claveConfLocal;
 	
-	//driver.findElement(By.id("pe.com.surgir.surgirapp:id/btnIngresar")).click();
 	@AndroidFindBy(id="pe.com.surgir.surgirapp:id/btnIngresar")
 	public WebElement localButton;
-	
-	//Home
-//	@AndroidFindBy(id="pe.com.surgir.surgirapp:id/rlPropuesta")
-//	private WebElement propuestaButton;
-	
-//	@AndroidFindBy(id="pe.com.surgir.surgirapp:id/icon_return_home")
-//	private WebElement returnButton;
-	
-//	@AndroidFindBy(id="pe.com.surgir.surgirapp:id/btnPropuestaHome")
-//	private WebElement propuestaHome;
-	
+		
 	public FormPage setMessageinit()
 	{
 		WebElement msgge = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.TextView"));
@@ -132,20 +111,12 @@ public class FormPage extends AndroidActions{
 		loginButton.click();
 		return this;
 	}
-	
-	/*
-	public void setAgencySelection(String agencyName) {
-		agencySelection.click();
-		scrollToText(agencyName);
-		driver.findElement(By.xpath("//android.widget.TextView[@text='"+agencyName+"']")).click();
-	}*/
-	
+		
 	public FormPage setAgencySelection() {
 		agencySelection.click();
 		touchAgencia();
 		return this;
 	
-		
 	}
 	
 	public FormPage setRolSelection(String role) {

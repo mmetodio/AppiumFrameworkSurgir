@@ -3,6 +3,8 @@ package org.meto.appium.tests;
 import org.testng.annotations.Test;
 import java.lang.reflect.Method;
 import java.time.Duration;
+import java.util.HashMap;
+
 import org.meto.appium.base.TestBase;
 import org.meto.appium.pages.FormBusiness;
 import org.meto.appium.pages.FormContract;
@@ -49,7 +51,8 @@ public class TFProspect extends TestBase {
 	//	formProspect.ReturnButton();
 		formProspect.btnPropuesta();
 		formProspect.PropuestaHome();
-		formProspect.setNumDoc("44582321");  //48208831 C  74883197 D    08163942
+		formProspect.setNumDoc("40257461");  //48208831 C  74883197 D    08163942
+	//	formProspect.setNumDoc(input.get("number"));
 		formProspect.Verificando();
 		formProspect.setFecCaducidad("01/01/2030");
 		formProspect.setFirstName("TestAutomat");

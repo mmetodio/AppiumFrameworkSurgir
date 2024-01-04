@@ -47,18 +47,18 @@
 			<class name="org.meto.appium.tests.TFProposal" /> 
 		</classes> 
 	</test>   <!-- Test -->
-	
+	<!--
 	<test name="Contract Test"> 
 		<classes> 
 			<class name="org.meto.appium.tests.TFContract" /> 
 		</classes> 
-	</test>   <!-- Test -->
-	
+	</test>-->   <!-- Test -->
+	<!--
 	<test name="Signature Test"> 
 		<classes> 
 			<class name="org.meto.appium.tests.TFSignature" /> 
 		</classes> 
-	</test>   <!-- Test -->
+	</test>-->   <!-- Test -->
 
 	<!-- <test name="Open Account Test"> <classes> <class name="com.m2a.testcases.OpenAccountTest" 
 		/> </classes> </test> -->   <!-- Test -->

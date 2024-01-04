@@ -37,9 +37,12 @@ public class TestBase extends AppiumUtils{
 	//@BeforeClass
 	public void setup(ITestContext testContext)  throws IOException{
 		Properties prop = new Properties();
-		FileInputStream filn = new FileInputStream("C://prueba//AppiumFrameworkSurgir//src//main//java//org//meto//appium//resources//data.properties");
+	//	FileInputStream filn = new FileInputStream("C://prueba//AppiumFrameworkSurgir//src//main//java//org//meto//appium//resources//data.properties");
+		FileInputStream filn = new FileInputStream(System.getProperty("user.dir")+"//src//main//java//org//meto//appium//resources//data.properties");
+	//	prop.load(filn);
+	//	String ipAddress = prop.getProperty("ipAddress");
+		String ipAddress = System.getProperty("ipAddress")!=null ? System.getProperty("ipAddress") : prop.getProperty("ipAddress");
 		prop.load(filn);
-		String ipAddress = prop.getProperty("ipAddress");
 		String port = prop.getProperty("port");
 		service = startAppiumServer(ipAddress, Integer.parseInt(port) ); //Integer.parseInt(port)
 		/*
@@ -79,12 +82,9 @@ public class TestBase extends AppiumUtils{
 		options.setCapability("browserstack.networkLogs", "true");
 	//	options.setCapability("browserstack.debug", "true");//activar los registros visuales de log
 
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub/"), options);
-	//	driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
-	//	driver = new AndroidDriver(service.getUrl(), options);
 	//	driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub/"), options);
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
-		//driver = new AndroidDriver(service.getUrl(), options);
+	//	driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
+		driver = new AndroidDriver(service.getUrl(), options);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		

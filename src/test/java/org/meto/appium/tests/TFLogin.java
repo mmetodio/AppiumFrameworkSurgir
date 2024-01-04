@@ -12,21 +12,8 @@ import org.meto.appium.pages.FormBusiness;
 import org.meto.appium.pages.FormCustomer;
 import org.meto.appium.pages.FormPage;
 import org.meto.appium.pages.FormProspect;
-import org.meto.appium.pages.FormRse;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-
-import io.appium.java_client.android.Activity;
-import io.appium.java_client.android.AndroidTouchAction;
-import io.appium.java_client.touch.TapOptions;
-import io.appium.java_client.touch.offset.ElementOption;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.StartsActivity;
-import io.appium.java_client.android.options.app.SupportsAppActivityOption;
-
 
 public class TFLogin extends TestBase {
 	FormPage formPage;
@@ -52,7 +39,6 @@ public class TFLogin extends TestBase {
 		formPage.setNameUser(input.get("usuario"));
 		formPage.setNamePass(input.get("password"));
 		formPage.setSubmitLogin();
-
 
 	}
 	

@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.v116.network.Network;
+import org.openqa.selenium.devtools.v118.network.Network;
 
 public class CaptureRequest {
 

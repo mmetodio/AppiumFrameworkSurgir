@@ -35,15 +35,6 @@ public abstract class AppiumUtils {
 		
 	}*/
 	
-	/*
-	public Double getFormattedAmount(String amount)
-	{
-		Double sbasic = Double.parseDouble(amount.substring(1));
-		return sbasic;
-		
-	}*/
-	
-	
 	public List<HashMap<String, String>> getJsonData(String jsonFilePath) throws IOException{
 	//	String jsonContent = FileUtils.readFileToString(new File(System.getProperty("user.dir")+"//src//test//java//org//meto//appium//testdata//dlogin.json"), StandardCharsets.UTF_8);
 	//	String jsonContent = FileUtils.readFileToString(new File(jsonFilePath), StandardCharsets.UTF_8);

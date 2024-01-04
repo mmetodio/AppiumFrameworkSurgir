@@ -64,7 +64,7 @@ public class TFProposal extends TestBase {
 		formProposal.btnCerrarRse();
 		//formProposal.calculaTasa();
 		formProposal.nextOneProposal();
-		formProposal.fecVencimiento("20/01/2024");
+		formProposal.fecVencimiento("20/02/2024");
 		formProposal.savePropos();
 		formProposal.seguroBasico();
 		formProposal.swipeScreenOneProposal();
